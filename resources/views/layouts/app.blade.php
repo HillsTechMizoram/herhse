@@ -21,6 +21,9 @@
 
         <link rel="stylesheet" href="{{ asset('app.css') }}">
         
+        
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body class="font-sans antialiased">
         <x-banner />
@@ -50,7 +53,11 @@
        
         @livewireScripts
 
-        <script src="{{ asset('app.js') }}"></script>
+        @include('sweetalert::alert')
 
+        
+        <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+        <script src="{{ asset('app.js') }}"></script>
+        
     </body>
 </html>

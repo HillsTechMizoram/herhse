@@ -13,12 +13,17 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
 
-                    @if (Auth::user()->isAdmin === 1)
-                    @endif
+                    
 
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    
+                    @if (Auth::user()->isAdmin === 1)
+                        <x-nav-link href="{{ route('rider') }}" :active="request()->routeIs('rider')">
+                            {{ __('Manage Rider') }}
+                        </x-nav-link>
+                    @endif
                     
                     
                 </div>

@@ -19,6 +19,8 @@ return new class extends Migration
             $table->integer('amount');
             $table->string('remarks');
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 
